@@ -13,8 +13,6 @@ if (!id) {
 
 const productUrl = baseUrl + "wc/store/products/" + id;
 
-console.log(productUrl);
-
 (async function () {
   try {
     const response = await fetch(productUrl);
@@ -34,7 +32,7 @@ console.log(productUrl);
           <p class="details-description">${details.description}</p>
           <p class="details-price">${details.prices.currency_symbol} ${details.prices.price}</p>
         </div>  
-        <a class="btn add-chart-btn" id="addToChartBtn">Add To Chart</a>
+        <a class="btn add-cart-btn" id="addToCartBtn">Add To Cart</a>
       </div>`;
 
   } catch (error) {

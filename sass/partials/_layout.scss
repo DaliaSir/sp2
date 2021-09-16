@@ -28,8 +28,8 @@ body {
   background-color: #ffffff;
   font-weight: 600;
   padding: 10px 0;
-  margin: 20px 16px;
-  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
   text-align: center;
   font-size: 1.2rem;
   box-shadow: 0 5px 5px 5px rgba(27, 22, 17, 0.3);
@@ -57,12 +57,12 @@ body {
 /*----LOADER-----*/
 
 .loader {
-  border: 16px solid $primary;
-  border-top: 16px solid $white;
+  border: 12px solid $primary;
+  border-top: 12px solid $white;
   border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  margin-left: 50%;
+  width: 80px;
+  height: 80px;
+  margin: 40px 60px 40px 48%;
   animation: spin 2s linear infinite;
 }
 

@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CAMELLIA - Chart</title>
+  <title>CAMELLIA - Cart</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -41,7 +41,7 @@
               <a class="nav-link" href="#">Log In</a>
             </li>
             <li class="nav-item btn btn-outline-dark rounded-pill bg-white">
-              <a class="nav-link active" href="chart.html" aria-current="page">Chart <span
+              <a class="nav-link active" href="cart.html" aria-current="page">Cart <span
                   class="badge rounded-pill bg-dark">4</span></a>
             </li>
           </ul>
@@ -49,9 +49,16 @@
       </div>
     </nav>
 
-    <div>
-      <div class="chart-container">
+    <div class="wrapper cart">
+      <h1 class="text-center">My Cart</h1>
+      <div class="cart-container">
         <div class="loader"></div>
+      </div>
+      <div class="cart-btns">
+        <div class="emptyButton-container">
+          <button class="btn emptyBtn" type="button">Empty Cart</button>
+        </div>
+        <button class="btn proceedBtn" type="button">Proceed To Checkout</button>
       </div>
     </div>
   </main>
@@ -123,7 +130,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
     integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
     crossorigin="anonymous"></script>
-  <script src="js/chart.js" type="module"></script>
+  <script src="js/cart.js" type="module"></script>
 </body>
 
 </html>
