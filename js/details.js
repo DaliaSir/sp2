@@ -11,7 +11,7 @@ if (!id) {
   document.location.href = "/";
 }
 
-const productUrl = baseUrl + "products/" + id;
+const productUrl = baseUrl + "wc/store/products/" + id;
 
 console.log(productUrl);
 
@@ -20,18 +20,21 @@ console.log(productUrl);
     const response = await fetch(productUrl);
     const details = await response.json();
 
-    document.title = details.title;
+    document.title = details.name;
 
     const detailsContainer = document.querySelector(".details-container");
 
     detailsContainer.innerHTML = `
-      <div class="col">
+      <div class="col-12 col-md-8">
         <div class="details-image card-img-top" style="background-image: url('${details.images[0].src}');"></div>
       </div>
-      <div class="col details-text">
-        <h1 class="details-name">${details.name}</h1>
-        <p class="details-description">${details.description}</p>
-        <p class="details-price">${details.prices.currency_symbol} ${details.prices.price}</p>
+      <div class="col-12 col-md-4 details-text">
+        <div>
+          <h1 class="details-name">${details.name}</h1>
+          <p class="details-description">${details.description}</p>
+          <p class="details-price">${details.prices.currency_symbol} ${details.prices.price}</p>
+        </div>  
+        <a class="btn add-chart-btn" id="addToChartBtn">Add To Chart</a>
       </div>`;
 
   } catch (error) {

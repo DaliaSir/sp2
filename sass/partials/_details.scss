@@ -12,6 +12,9 @@
 }
 
 .details-text {
+  h1 {
+    font-weight: 600;
+  }
   p {
     font-size: 1.2rem;
     margin-top: 10px;
@@ -20,44 +23,42 @@
   .details-price {
     font-weight: 600;
   }
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (min-width: 420px) {
-  .details-image {
-    margin-right: 20px;
-  }
+.add-chart-btn {
+  background-color: $primary;
+  color: $white;
+  font-weight: 500;
+  padding: 12px 24px;
+  max-width: 200px;
+  box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.1);
 
-  .details-text {
-    margin-top: 20px;
-    p {
-      font-size: 1rem;
-      margin-top: 10px;
-    }
+  &:hover {
+    background-color: $white;
+    border: 1px solid $primary;
+    color: $primary;
   }
 }
 
-@media (min-width: 840px) {
+@media (min-width: 992px) {
   .details-image {
     width: 600px;
     height: 600px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    margin: 0 40px 0 auto;
-  }
-
-  .details-container {
-    padding: 40px;
   }
 
   .details-text {
+    align-items: flex-start;
     p {
       font-size: 1.4rem;
-      margin-top: 40px;
-    }
-
-    .details-price {
-      font-weight: 600;
+      margin-top: 20px;
     }
   }
 }

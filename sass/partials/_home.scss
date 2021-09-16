@@ -3,7 +3,7 @@
   font-size: 1.2rem;
 }
 
-.hero .card-img-overlay {
+.hero-container .card-img-overlay {
   max-width: 65%;
   margin-top: 25%;
   a {
@@ -15,9 +15,7 @@
 .hero-img {
   min-height: 70vh;
   width: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-size: cover !important;
 }
 
 .tea-tasting {
@@ -47,7 +45,7 @@
   }
 }
 
-.featured-products {
+.featured {
   margin: 60px auto 40px auto;
 
   h2 {
@@ -76,7 +74,7 @@
 }
 
 @media (min-width: 870px) {
-  .hero .card-img-overlay {
+  .hero-container .card-img-overlay {
     max-width: 35%;
     margin-top: 15%;
   }
