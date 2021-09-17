@@ -1,6 +1,8 @@
 export const noResults = `
-<p>No Products Found</p>
-<p>Please try again</p>
+<a href="products.html" class="no-results">
+  <p>No Products Found</p>
+  <p class="btn try-again">Please try again</p>
+</a>
 `;
 
 export const emptyCartMsg = `

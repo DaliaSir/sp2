@@ -38,6 +38,9 @@
   border-top: 1px solid $colour-accent;
   border-bottom: 1px solid $colour-accent;
   margin-top: 20px;
+  &:hover {
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.1);
+  }
 }
 
 @media (min-width: 768px) {

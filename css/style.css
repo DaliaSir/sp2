@@ -9318,7 +9318,7 @@ body {
   margin: 20px auto;
   text-align: center;
   font-size: 1.2rem;
-  box-shadow: 0 5px 5px 5px rgba(27, 22, 17, 0.3);
+  box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.1);
 }
 
 .message p {
@@ -9612,6 +9612,20 @@ h1, .h1, h2, .h2, h3, .h3 {
   text-align: center;
 }
 
+.products-container a {
+  text-decoration: none;
+}
+
+.try-again {
+  border-top: 1px solid #c11e2f;
+  border-bottom: 1px solid #c11e2f;
+  margin-top: 20px;
+}
+
+.try-again:hover {
+  box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.1);
+}
+
 .details-image {
   width: 300px;
   height: 300px;
@@ -9622,7 +9636,7 @@ h1, .h1, h2, .h2, h3, .h3 {
 }
 
 .details-container {
-  padding: 20px;
+  padding: 20px 20px 60px 20px;
 }
 
 .details-text {
@@ -9716,6 +9730,10 @@ h1, .h1, h2, .h2, h3, .h3 {
   border-top: 1px solid #c11e2f;
   border-bottom: 1px solid #c11e2f;
   margin-top: 20px;
+}
+
+.continue-shopping:hover {
+  box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.1);
 }
 
 @media (min-width: 768px) {
