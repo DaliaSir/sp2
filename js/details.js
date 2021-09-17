@@ -1,5 +1,6 @@
 import { baseUrl } from "./components/baseUrl.js";
 import { displayMessage } from "./utils/displayMessage.js";
+import { addToCart } from "./addToCart.js";
 
 const queryString = document.location.search;
 
@@ -18,7 +19,7 @@ const productUrl = baseUrl + "wc/store/products/" + id;
     const response = await fetch(productUrl);
     const details = await response.json();
 
-    document.title = details.name;
+    document.title = "Camellia" + details.name;
 
     const detailsContainer = document.querySelector(".details-container");
 
@@ -32,10 +33,13 @@ const productUrl = baseUrl + "wc/store/products/" + id;
           <p class="details-description">${details.description}</p>
           <p class="details-price">${details.prices.currency_symbol} ${details.prices.price}</p>
         </div>  
-        <a class="btn add-cart-btn" id="addToCartBtn">Add To Cart</a>
+        <a class="btn add-cart-btn" id="addToCartBtn" data-id="${details.id}" data-name="${details.name}" data-price="${details.prices.price}" data-image="${details.images[0].src}">Add To Cart</a>
       </div>`;
+    addToCart();
 
   } catch (error) {
     displayMessage("error", error, ".details-container");
   }
 })();
+
+

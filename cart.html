@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CAMELLIA - Cart</title>
+  <title>Camellia - Cart</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -49,16 +50,23 @@
       </div>
     </nav>
 
-    <div class="wrapper cart">
+    <div class="container cart">
       <h1 class="text-center">My Cart</h1>
-      <div class="cart-container">
-        <div class="loader"></div>
-      </div>
-      <div class="cart-btns">
-        <div class="emptyButton-container">
-          <button class="btn emptyBtn" type="button">Empty Cart</button>
+      <div class="container_cart row">
+        <div class="col-12 col-md-7 container_cart--products">
+          <div class="loader"></div>
         </div>
-        <button class="btn proceedBtn" type="button">Proceed To Checkout</button>
+
+        <div class="col-12 col-md-5 container_cart--total">
+          <h4>Total: &#36; <span></span></h4>
+          <div class="cart-btns">
+            <button class="btn proceedBtn" type="button">Proceed To Checkout</button>
+            <div class="emptyButton-container">
+              <button class="btn emptyBtn" type="button">Empty Cart</button>
+            </div>
+
+          </div>
+        </div>
       </div>
     </div>
   </main>

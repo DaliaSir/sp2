@@ -3,7 +3,27 @@ import { displayMessage } from "./utils/displayMessage.js";
 import { emptyCartMsg } from "./components/messages.js";
 import { clearList } from "./utils/emptyCart.js";
 
-const cartContainer = document.querySelector(".cart-container");
+const inCart = getFromStorage("cart-list");
+
+const cartContainer = document.querySelector(".container_cart--products");
+
+cartContainer.innerHTML = "";
+
+inCart.forEach((product) => {
+  cartContainer.innerHTML += `
+      <div class="row container-cart_product">
+        <div class="product-img-cart col-md-4" style="background-image: url('${product.image}');"></div>
+        <div class="col-md-8">
+          <h4>${product.name}</h4>
+          <p> &#36; ${product.price}</p>
+          <a class="btn view-item" href="details.html?id=${product.id}">View Product</a>
+          <a class="btn remove-item" href="#">Remove</a>
+        </div>
+      </div>
+  `;
+});
+
+/* const cartContainer = document.querySelector(".container_cart--products");
 const emptyCartButton = document.querySelector(".emptyBtn");
 const proceedToCheckoutBtn = document.querySelector(".proceedBtn");
 
@@ -17,7 +37,7 @@ const proceedToCheckoutBtn = document.querySelector(".proceedBtn");
   const productsInCart = getFromStorage("cart-list");
 
   if (productsInCart.length === 0) {
-    displayMessage("", emptyCartMsg, ".cart-container");
+    displayMessage("", emptyCartMsg, ".container_cart--products");
     emptyCartButton.style.display = 'none';
     proceedToCheckoutBtn.style.display = 'none';
   } else {
@@ -36,4 +56,4 @@ const proceedToCheckoutBtn = document.querySelector(".proceedBtn");
               `;
     });
   }
-})();
+})(); */

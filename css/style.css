@@ -9695,35 +9695,68 @@ h1, .h1, h2, .h2, h3, .h3 {
   margin: 20px;
 }
 
+.container_cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container-cart_product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.view-item,
+.proceedBtn {
+  background-color: #1b1c1e;
+  color: #fff;
+  margin-right: 10px;
+}
+
+.view-item:hover,
+.proceedBtn:hover {
+  background-color: #fff;
+  color: #1b1c1e;
+  border: 1px solid #1b1c1e;
+}
+
+.proceedBtn,
+.emptyBtn {
+  margin: 20px;
+}
+
+.remove-item,
+.emptyBtn {
+  background-color: #fff;
+  color: #c11e2f;
+  border: 1px solid #c11e2f;
+}
+
+.remove-item:hover,
+.emptyBtn:hover {
+  background-color: #c11e2f;
+  color: #fff;
+  border: 1px solid #c11e2f;
+}
+
+.product-img-cart {
+  width: 250px;
+  height: 150px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 20px;
+}
+
 .cart-btns {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 40px;
-}
-
-.emptyBtn,
-.proceedBtn {
-  background-color: #1b1c1e;
-  color: #fff;
-  font-weight: 500;
-  padding: 12px 24px;
-  max-width: 250px;
-  box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-}
-
-.emptyBtn:hover,
-.proceedBtn:hover {
-  background-color: #fff;
-  border: 1px solid #1b1c1e;
-  color: #1b1c1e;
-}
-
-.emptyBtn:hover {
-  background-color: #fff;
-  border: 1px solid #c11e2f;
-  color: #c11e2f;
 }
 
 .continue-shopping {
@@ -9737,6 +9770,34 @@ h1, .h1, h2, .h2, h3, .h3 {
 }
 
 @media (min-width: 768px) {
+  .container_cart {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .container_cart--products {
+    border-right: 1px solid #c4c4c4;
+  }
+  .container_cart--total {
+    padding-left: 20px;
+    margin-top: 40px;
+  }
+  .container-cart_product {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 40px;
+    text-align: start;
+  }
+  .product-img-cart {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (min-width: 1200px) {
   .cart-btns {
     flex-direction: row;
     justify-content: space-around;

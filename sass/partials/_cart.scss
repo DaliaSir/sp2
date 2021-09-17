@@ -4,34 +4,64 @@
   }
 }
 
+.container_cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container-cart_product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.view-item,
+.proceedBtn {
+  background-color: $primary;
+  color: $white;
+  margin-right: 10px;
+  &:hover {
+    background-color: $white;
+    color: $primary;
+    border: 1px solid $primary;
+  }
+}
+
+.proceedBtn,
+.emptyBtn {
+  margin: 20px;
+}
+
+.remove-item,
+.emptyBtn {
+  background-color: $white;
+  color: $colour-accent;
+  border: 1px solid $colour-accent;
+  &:hover {
+    background-color: $colour-accent;
+    color: $white;
+    border: 1px solid $colour-accent;
+  }
+}
+
+.product-img-cart {
+  width: 250px;
+  height: 150px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 20px;
+}
+
 .cart-btns {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 40px;
-}
-
-.emptyBtn,
-.proceedBtn {
-  background-color: $primary;
-  color: $white;
-  font-weight: 500;
-  padding: 12px 24px;
-  max-width: 250px;
-  box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-
-  &:hover {
-    background-color: $white;
-    border: 1px solid $primary;
-    color: $primary;
-  }
-}
-
-.emptyBtn:hover {
-  background-color: $white;
-  border: 1px solid $colour-accent;
-  color: $colour-accent;
 }
 
 .continue-shopping {
@@ -44,6 +74,36 @@
 }
 
 @media (min-width: 768px) {
+  .container_cart {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    &--products {
+      border-right: 1px solid #c4c4c4;
+    }
+    &--total {
+      padding-left: 20px;
+      margin-top: 40px;
+    }
+  }
+
+  .container-cart_product {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 40px;
+    text-align: start;
+  }
+
+  .product-img-cart {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (min-width: 1200px) {
   .cart-btns {
     flex-direction: row;
     justify-content: space-around;
