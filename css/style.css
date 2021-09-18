@@ -3224,6 +3224,29 @@ fieldset:disabled .btn {
   border-radius: 0.2rem;
 }
 
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 0;
+  margin-bottom: 1rem;
+  list-style: none;
+}
+
+.breadcrumb-item + .breadcrumb-item {
+  padding-left: 0.5rem;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  float: left;
+  padding-right: 0.5rem;
+  color: #6c757d;
+  content: var(--bs-breadcrumb-divider, "/") /* rtl: var(--bs-breadcrumb-divider, "/") */;
+}
+
+.breadcrumb-item.active {
+  color: #6c757d;
+}
+
 .fade {
   transition: opacity 0.15s linear;
 }
@@ -9290,10 +9313,16 @@ body {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
   padding: 0;
   font-family: "Roboto", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
   background-color: #fff;
+}
+
+main {
+  flex: 1 0 auto;
 }
 
 .card {
@@ -9302,6 +9331,11 @@ body {
 
 .btn {
   text-transform: uppercase;
+}
+
+.top-banner {
+  color: #ff2a40;
+  font-size: 1.1rem;
 }
 
 .nav-link.active {
@@ -9372,8 +9406,8 @@ h1, .h1, h2, .h2, h3, .h3 {
   font-size: 2rem;
 }
 
-.subscribe .subscribe-dicount {
-  color: #c11e2f;
+.subscribe .subscribe-discount {
+  color: #ff2a40;
   font-size: 1.4rem;
 }
 
@@ -9419,11 +9453,6 @@ h1, .h1, h2, .h2, h3, .h3 {
   border: 1px solid #1b1c1e;
   color: #1b1c1e;
   background-color: #fff;
-}
-
-.top-banner {
-  color: #c11e2f;
-  font-size: 1.2rem;
 }
 
 .hero-container .card-img-overlay {
@@ -9626,6 +9655,20 @@ h1, .h1, h2, .h2, h3, .h3 {
   box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.1);
 }
 
+.breadcrumb {
+  padding: 20px 0;
+  font-size: 1.1rem;
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
 .details-image {
   width: 300px;
   height: 300px;
@@ -9674,10 +9717,17 @@ h1, .h1, h2, .h2, h3, .h3 {
   color: #1b1c1e;
 }
 
+.add-cart-btn:active {
+  background-color: #198754;
+  border: 1px solid #198754;
+  color: #fff;
+}
+
 @media (min-width: 992px) {
   .details-image {
-    width: 600px;
-    height: 600px;
+    width: 550px;
+    height: 550px;
+    margin: 0 auto;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -9749,6 +9799,7 @@ h1, .h1, h2, .h2, h3, .h3 {
   height: 150px;
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
   margin-bottom: 20px;
 }
 

@@ -4,10 +4,16 @@ body {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
   padding: 0;
   font-family: $font-primary;
   background-color: $white;
+}
+
+main {
+  flex: 1 0 auto;
 }
 
 .card {
@@ -16,6 +22,11 @@ body {
 
 .btn {
   text-transform: uppercase;
+}
+
+.top-banner {
+  color: #ff2a40;
+  font-size: 1.1rem;
 }
 
 .nav-link.active {

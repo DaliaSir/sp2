@@ -6,8 +6,7 @@ export function addToCart() {
   addToCartBtn.addEventListener("click", handleClick);
 
   function handleClick() {
-    this.classList.toggle("in-cart");
-
+    this.classList.add("in-cart");
     const id = this.dataset.id;
     const name = this.dataset.name;
     const price = this.dataset.price;
@@ -18,6 +17,8 @@ export function addToCart() {
     const isInCart = currentCart.find((item) => {
       return item.id === id;
     });
+
+
 
     if (!isInCart) {
       const product = { id: id, name: name, price: price, image: image };
@@ -36,3 +37,4 @@ export function addToCart() {
     }
   }
 }
+

@@ -20,6 +20,8 @@ const productUrl = baseUrl + "wc/store/products/" + id;
     const details = await response.json();
 
     document.title = "Camellia" + details.name;
+    const breadcrumbName = document.querySelector(".breadcrumb-item.active");
+    breadcrumbName.innerHTML = `${details.name}`;
 
     const detailsContainer = document.querySelector(".details-container");
 
