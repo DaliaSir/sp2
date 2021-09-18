@@ -1,11 +1,12 @@
 import { baseUrl } from "./components/baseUrl.js";
 import { displayMessage } from "./utils/displayMessage.js";
 import { addToCart } from "./addToCart.js";
+import getCartBadge from "./utils/cartBadge.js";
+
+getCartBadge();
 
 const queryString = document.location.search;
-
 const params = new URLSearchParams(queryString);
-
 const id = params.get("id");
 
 if (!id) {

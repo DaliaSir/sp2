@@ -3,7 +3,6 @@ export function renderProducts(products) {
 
   productsContainer.innerHTML = "";
 
-
   products.forEach((product) => {
 
     const productName = product.name ? product.name : "Unknown name";

@@ -9780,14 +9780,12 @@ h1, .h1, h2, .h2, h3, .h3 {
   margin: 20px;
 }
 
-.remove-item,
 .emptyBtn {
   background-color: #fff;
   color: #c11e2f;
   border: 1px solid #c11e2f;
 }
 
-.remove-item:hover,
 .emptyBtn:hover {
   background-color: #c11e2f;
   color: #fff;

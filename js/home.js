@@ -1,17 +1,17 @@
 import { baseUrl } from "./components/baseUrl.js";
 import { displayMessage } from "./utils/displayMessage.js";
 import { renderFeatured } from "./utils/renderFeatured.js";
+import getCartBadge from "./utils/cartBadge.js";
 
 const heroUrl = baseUrl + "wp/v2/media/75";
 
-
 (async function () {
-
   try {
     const response = await fetch(heroUrl);
     const hero = await response.json();
 
     fetchHeroImage(hero);
+    getCartBadge();
 
   } catch (error) {
     console.log(error);
@@ -19,18 +19,15 @@ const heroUrl = baseUrl + "wp/v2/media/75";
   }
 })();
 
+
 function fetchHeroImage(hero) {
   const heroContainer = document.querySelector(".hero-img");
   heroContainer.style.background = `url(${hero.guid.rendered}) no-repeat center`;
 }
 
-
-
 const productsUrl = baseUrl + "wc/store/products/?per_page=100";
 
-
 (async function () {
-
   try {
     const response = await fetch(productsUrl);
     const products = await response.json();
