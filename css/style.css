@@ -9407,8 +9407,9 @@ h1, .h1, h2, .h2, h3, .h3 {
 }
 
 .subscribe .subscribe-discount {
-  color: #ff2a40;
+  color: #c11e2f;
   font-size: 1.4rem;
+  font-weight: 500;
 }
 
 @media (min-width: 870px) {
@@ -9473,12 +9474,15 @@ h1, .h1, h2, .h2, h3, .h3 {
 
 .tea-tasting {
   margin: 40px auto;
+  background-color: #1b1c1e;
 }
 
 .tea-tasting .card {
   margin: 0 auto;
   padding: 20px;
   max-width: 540px;
+  background-color: #1b1c1e;
+  color: #fff;
 }
 
 .tea-tasting .card-title {
@@ -9499,7 +9503,7 @@ h1, .h1, h2, .h2, h3, .h3 {
 }
 
 .featured {
-  margin: 60px auto 40px auto;
+  margin: 60px auto;
 }
 
 .featured h2, .featured .h2 {
@@ -9509,10 +9513,13 @@ h1, .h1, h2, .h2, h3, .h3 {
 .featured .col {
   max-width: 450px;
   border: none;
+  margin: 0 auto;
 }
 
 .subscribe {
+  background-color: #ececec;
   padding: 40px;
+  margin-bottom: 40px;
 }
 
 .subscribe .input-group {

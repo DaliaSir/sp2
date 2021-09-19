@@ -15,11 +15,14 @@
 
 .tea-tasting {
   margin: 40px auto;
+  background-color: $dark;
 
   .card {
     margin: 0 auto;
     padding: 20px;
     max-width: 540px;
+    background-color: $dark;
+    color: $white;
   }
 
   .card-title {
@@ -41,7 +44,7 @@
 }
 
 .featured {
-  margin: 60px auto 40px auto;
+  margin: 60px auto;
 
   h2 {
     margin: 40px 0 40px 0;
@@ -50,12 +53,14 @@
   .col {
     max-width: 450px;
     border: none;
+    margin: 0 auto;
   }
 }
 
 .subscribe {
+  background-color: #ececec;
   padding: 40px;
-
+  margin-bottom: 40px;
   .input-group {
     width: 90%;
     margin: 20px auto 0 auto;
